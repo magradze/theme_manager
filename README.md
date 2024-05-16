@@ -1,5 +1,9 @@
 # Themer
 
+**Screenshot**
+
+<img src="assets/themer.gif" width="200">
+
 **Usage:**
 
 ```dart
