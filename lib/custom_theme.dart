@@ -1,4 +1,4 @@
-part of 'theme_manager.dart';
+part of 'm_theme_manager.dart';
 
 class CustomTheme {
   Color? primaryColor;

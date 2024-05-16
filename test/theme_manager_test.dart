@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:theme_manager/theme_manager.dart';
+import 'package:m_theme_manager/m_theme_manager.dart';
 
 void main() {
   test('adds one to input values', () {

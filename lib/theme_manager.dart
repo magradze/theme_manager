@@ -1,4 +1,4 @@
-library theme_manager;
+library m_theme_manager;
 
 import 'package:flutter/material.dart';
 

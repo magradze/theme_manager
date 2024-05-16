@@ -1,4 +1,4 @@
-part of 'theme_manager.dart';
+part of 'm_theme_manager.dart';
 
 class ThemeManager with ChangeNotifier {
   ThemeMode _themeMode = ThemeMode.light;
