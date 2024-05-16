@@ -2,7 +2,7 @@
 
 **Screenshot**
 
-<img src="assets/themer.gif" width="200">
+<img src="https://raw.githubusercontent.com/magradze/themer/main/assets/themer.gif" width="200">
 
 **Usage:**
 
