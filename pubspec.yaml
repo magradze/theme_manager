@@ -1,8 +1,8 @@
-name: m_theme_manager
+name: themer
 description: "Flutter Theme manager package."
-version: 0.0.2
+version: 0.0.3
 homepage: 'https://magradze.dev'
-repository: 'https://github.com/magradze/m_theme_manager'
+repository: 'https://github.com/magradze/themer'
 
 environment:
   sdk: '>=3.3.4 <4.0.0'
