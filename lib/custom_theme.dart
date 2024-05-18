@@ -17,13 +17,36 @@ class CustomTheme {
 
   ThemeData lightTheme() {
     return ThemeData(
-        brightness: Brightness.light,
-        primaryColor: primaryColor,
-        appBarTheme: AppBarTheme(
-          backgroundColor: primaryColor,
-          foregroundColor: Colors.white,
+      brightness: Brightness.light,
+      primaryColor: primaryColor,
+      appBarTheme: AppBarTheme(
+        backgroundColor: primaryColor,
+        foregroundColor: Colors.white,
+        iconTheme: IconThemeData(
+          color: primaryColor!.computeLuminance() > 0.5
+              ? Colors.black
+              : Colors.white,
         ),
-        scaffoldBackgroundColor: backgroundColor);
+      ),
+      scaffoldBackgroundColor: backgroundColor,
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all(primaryColor),
+          foregroundColor: MaterialStateColor.resolveWith(
+            (states) => primaryColor!.computeLuminance() > 0.5
+                ? Colors.black
+                : Colors.white,
+          ),
+          splashFactory: InkSparkle.constantTurbulenceSeedSplashFactory,
+          iconColor: MaterialStateColor.resolveWith(
+            (states) => primaryColor!.computeLuminance() > 0.5
+                ? Colors.black
+                : Colors.white,
+          ),
+        ),
+      ),
+      cardColor: Colors.white,
+    );
   }
 
   ThemeData darkTheme() {
@@ -33,8 +56,30 @@ class CustomTheme {
       appBarTheme: AppBarTheme(
         backgroundColor: primaryColor,
         foregroundColor: Colors.white,
+        iconTheme: IconThemeData(
+          color: primaryColor!.computeLuminance() > 0.5
+              ? Colors.black
+              : Colors.white,
+        ),
       ),
       scaffoldBackgroundColor: backgroundColor,
-    );
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all(primaryColor),
+          foregroundColor: MaterialStateColor.resolveWith(
+            (states) => primaryColor!.computeLuminance() > 0.5
+                ? Colors.black
+                : Colors.white,
+          ),
+          splashFactory: InkSparkle.constantTurbulenceSeedSplashFactory,
+          iconColor: MaterialStateColor.resolveWith(
+            (states) => primaryColor!.computeLuminance() > 0.5
+                ? Colors.black
+                : Colors.white,
+          ),
+        ),
+      ),
+      cardColor: Colors.black,
+    ); 
   }
 }
