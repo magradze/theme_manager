@@ -6,6 +6,7 @@ class CustomTheme {
   Color? backgroundColor;
   Color? textColor;
   Color? accentColor;
+  Color? cardColor;
 
   CustomTheme({
     this.primaryColor = Colors.orange,
@@ -13,6 +14,7 @@ class CustomTheme {
     this.backgroundColor = Colors.white,
     this.textColor = Colors.black,
     this.accentColor = Colors.green,
+    this.cardColor,
   });
 
   ThemeData lightTheme() {
@@ -31,21 +33,21 @@ class CustomTheme {
       scaffoldBackgroundColor: backgroundColor,
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(primaryColor),
-          foregroundColor: MaterialStateColor.resolveWith(
+          backgroundColor: WidgetStateProperty.all(primaryColor),
+          foregroundColor: WidgetStateColor.resolveWith(
             (states) => primaryColor!.computeLuminance() > 0.5
                 ? Colors.black
                 : Colors.white,
           ),
           splashFactory: InkSparkle.constantTurbulenceSeedSplashFactory,
-          iconColor: MaterialStateColor.resolveWith(
+          iconColor: WidgetStateColor.resolveWith(
             (states) => primaryColor!.computeLuminance() > 0.5
                 ? Colors.black
                 : Colors.white,
           ),
         ),
       ),
-      cardColor: Colors.white,
+      cardColor: cardColor,
     );
   }
 
@@ -65,21 +67,21 @@ class CustomTheme {
       scaffoldBackgroundColor: backgroundColor,
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(primaryColor),
-          foregroundColor: MaterialStateColor.resolveWith(
+          backgroundColor: WidgetStateProperty.all(primaryColor),
+          foregroundColor: WidgetStateColor.resolveWith(
             (states) => primaryColor!.computeLuminance() > 0.5
                 ? Colors.black
                 : Colors.white,
           ),
           splashFactory: InkSparkle.constantTurbulenceSeedSplashFactory,
-          iconColor: MaterialStateColor.resolveWith(
+          iconColor: WidgetStateColor.resolveWith(
             (states) => primaryColor!.computeLuminance() > 0.5
                 ? Colors.black
                 : Colors.white,
           ),
         ),
       ),
-      cardColor: Colors.black,
+      cardColor: cardColor ?? Colors.grey[900],
     ); 
   }
 }
