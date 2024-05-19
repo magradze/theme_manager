@@ -1,6 +1,6 @@
 name: themer
-description: "Flutter Theme manager package."
-version: 0.0.6
+description: "Flutter package for easy theme switching and color customization. Ideal for developers needing dynamic light/dark theme management in their apps."
+version: 0.0.8
 homepage: 'https://magradze.dev'
 repository: 'https://github.com/magradze/themer'
 
